@@ -1,7 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import moment from 'moment'
-import turkishAirlines from '../../images/turkish-airlines.svg'
 import plane from '../../images/plane.svg'
 
 const getTransfers = (count) => {
@@ -22,7 +21,7 @@ const Tickets = ({ tickets }) => (
     {tickets.map(ticket => (
       <div className="ticket-wrapper">
         <div className="ticket-price">
-          <img src={turkishAirlines || 'https://a.icons8.com/aUSOiWgn/DW0mD2/logo.svg'} alt="avia-logo" />
+          <img src="https://a.icons8.com/aUSOiWgn/DW0mD2/logo.svg" alt="avia-logo" />
           <button type="button" className="buy-ticket-button" onClick={() => {}}>
             <span className="buy-ticket-label">
               Купить
