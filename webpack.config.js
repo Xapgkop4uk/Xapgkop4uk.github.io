@@ -24,9 +24,9 @@ module.exports = {
       },
       {
         test:    /\.svg$/,
-        loader:  'file-loader',
+        loader:  require.resolve('url-loader'),
         options: {
-          useRelativePath: process.env.NODE_ENV === 'production'
+          limit: 10000
         }
       }
 
