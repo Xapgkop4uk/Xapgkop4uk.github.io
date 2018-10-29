@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { sortBy, compose, prop } from 'ramda'
 import { Logo, Filter, Tickets } from '../../components'
 import source from '../../tickets.json'
 
@@ -13,7 +14,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const { tickets } = source
-    this.setState({ tickets })
+    this.setState({ tickets: sortBy(compose(prop('stops')))(tickets) })
   }
 
   render() {
