@@ -1,0 +1,15 @@
+@import './FilterCurrency/FilterCurrency.scss';
+@import './FilterTransfer/FilterTransfer.scss';
+
+.filter-wrapper {
+  width: 232px;
+  height: 331px;
+  background: #ffffff;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  letter-spacing: 0px;
+  box-shadow: 0px 1px 4px 0px rgba(91, 137, 164, 0.25);
+}

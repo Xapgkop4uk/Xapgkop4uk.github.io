@@ -1,0 +1,11 @@
+.main {
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  font-size: 20px;
+  padding: 0 20%;
+  .main-content {
+    display: flex;
+    justify-content: center;
+  }
+}

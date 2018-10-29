@@ -1,0 +1,23 @@
+.filter-transfer-wrapper {
+  padding: 1rem;
+  
+  .transfer-label {
+    width: 48,94px;
+    height: 19px;
+    color: #4a4a4a;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
+
+  .transfer-selectors {
+    padding-top: 0.7rem;
+    border-radius: 0.1rem;
+    .input-label{
+      color: #4a4a4a;
+    }
+  }
+}

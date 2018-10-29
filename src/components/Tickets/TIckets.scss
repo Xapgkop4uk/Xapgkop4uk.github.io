@@ -1,0 +1,112 @@
+.tickets-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  .ticket-wrapper {
+    display: flex;
+    width: 566px;
+    height: 161px;
+    background: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: 0px 1px 4px 0px rgba(91, 137,164, 0.25);
+    .ticket-price {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      .buy-ticket-button {
+        width: 160px;
+        height: 56px;
+        background: #ff6d00;
+        border: none;
+        border-radius: 0.3rem;
+        box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 1px 0px 0px #d64d08;
+        cursor: pointer;
+        .buy-ticket-label {
+          color: white;
+          font-size: 16px;
+          word-wrap: break-word;
+
+        }
+      }
+    }
+    .ticket-details {
+      width: 366px;
+      display: flex;
+      .from {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem;
+        color: #4a4a4a;
+        .departure-time {
+          font-size: 32px;
+        }
+        .departure-details {
+          padding: 0 0.4rem 3.5rem;
+          .port {
+            font-size: 12px;
+            white-space: nowrap;
+          }
+          .departure-date {
+            color: #888;
+            display: flex;
+            font-size: 11px;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+      }
+      .to {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 1rem;
+        color: #4a4a4a;
+        .arrival-time {
+          font-size: 32px;
+        }
+        .arrival-details {
+          padding: 0 0.4rem 3.5rem;
+          .port {
+            font-size: 12px;
+            white-space: nowrap;
+          }
+          .arrival-date {
+            color: #888;
+            display: flex;
+            font-size: 11px;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+          }
+        }
+      }
+      .route-line {
+        width: 50%;
+        position: relative;
+        margin-bottom: 7.6rem;
+        border-bottom: 1px solid rgba(155, 155, 155, 0.5);
+        .route {
+          text-transform: uppercase;
+          color: black;
+          font-size: 10px;
+        }
+        .plane {
+          position: absolute;
+          top: 2rem;
+          right: -15px;
+        }
+      }
+    }
+  }
+}
