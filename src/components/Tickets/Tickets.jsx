@@ -22,7 +22,7 @@ const Tickets = ({ tickets }) => (
     {tickets.map(ticket => (
       <div className="ticket-wrapper">
         <div className="ticket-price">
-          <img src={turkishAirlines} alt="avia-logo" />
+          <img src={turkishAirlines || 'https://a.icons8.com/aUSOiWgn/DW0mD2/logo.svg'} alt="avia-logo" />
           <button type="button" className="buy-ticket-button" onClick={() => {}}>
             <span className="buy-ticket-label">
               Купить
