@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import Checkbox from '@material-ui/core/Checkbox'
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { contains } from 'ramda'
 

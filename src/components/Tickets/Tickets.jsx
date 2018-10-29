@@ -1,7 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import moment from 'moment'
-import plane from '../../images/plane.svg'
 
 const getTransfers = (count) => {
   switch (count) {
@@ -48,7 +47,7 @@ const Tickets = ({ tickets }) => (
             <span className="route">
               {getTransfers(ticket.stops)}
             </span>
-            <img src={plane} alt="plane" className="plane" />
+            <img src="https://a.icons8.com/hnhcupih/CIFYqd/ic_airplanemode_active_bl.svg" alt="plane" className="plane" />
           </div>
           <div className="to">
             <span className="arrival-time">
