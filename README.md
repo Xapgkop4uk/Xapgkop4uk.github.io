@@ -1,6 +1,19 @@
-# aviasales test task
+# Aviasales test task
 
 ## to start
-yarn install (npm instal)
-yarn start (npm start)
+if you use yarn run
+```javascript
+yarn install
+yarn start
+```
 
+for npm
+
+```javascript
+npm instal
+npm start
+```
+
+you can see online demo:
+
+https://xapgkop4uk.github.io/
