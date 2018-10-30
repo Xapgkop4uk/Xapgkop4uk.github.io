@@ -15,7 +15,13 @@ const getTransfers = (count) => {
   }
 }
 
-const Tickets = ({ tickets }) => (
+const getPrice = (rates, selectedCurrency, price) => {
+  if (!rates[selectedCurrency]) return price
+  return rates[selectedCurrency] * price
+}
+
+
+const Tickets = ({ tickets, rates, selectedCurrency }) => (
   <div className="tickets-wrapper">
     {tickets.map(ticket => (
       <div className="ticket-wrapper">
@@ -25,7 +31,7 @@ const Tickets = ({ tickets }) => (
             <span className="buy-ticket-label">
               Купить
               <br />
-              {`за ${new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', minimumFractionDigits: 0 }).format(ticket.price)}`}
+              {`за ${new Intl.NumberFormat('ru-RU', { style: 'currency', currency: selectedCurrency, minimumFractionDigits: 0 }).format(getPrice(rates, selectedCurrency, ticket.price))}`}
             </span>
           </button>
         </div>
@@ -69,7 +75,9 @@ const Tickets = ({ tickets }) => (
 )
 
 Tickets.propTypes = {
-  tickets: propTypes.array.isRequired
+  tickets:          propTypes.array.isRequired,
+  rates:            propTypes.array.isRequired,
+  selectedCurrency: propTypes.string.isRequired
 }
 
 export default Tickets

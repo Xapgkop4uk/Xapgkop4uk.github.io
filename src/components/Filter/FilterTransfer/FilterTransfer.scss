@@ -1,7 +1,8 @@
 .filter-transfer-wrapper {
-  padding: 1rem;
+  padding: 1rem 0;
   
   .transfer-label {
+    padding: 0 1rem;
     width: 48,94px;
     height: 19px;
     color: #4a4a4a;
@@ -19,5 +20,9 @@
     .input-label{
       color: #4a4a4a;
     }
+  }
+
+  .transfer-checkbox{
+    padding:0 1rem;
   }
 }

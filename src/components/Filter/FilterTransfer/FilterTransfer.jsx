@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { contains } from 'ramda'
 
-const styles = {
+const styles = () => ({
   root: {
     color:       '#ccc',
     padding:     '0.3rem 1rem',
@@ -13,8 +13,15 @@ const styles = {
       color: '#2196f3'
     }
   },
-  checked: {}
-}
+  checked: {},
+  tooltipStyle: {
+    cursor:      'pointer',
+    color:       'white',
+    background:  '#2196f3',
+    positon:     'absolute',
+    padding:     '0.3rem 1rem'
+  }
+})
 
 const transfers = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки']
 
@@ -28,8 +35,8 @@ const FilterTransfer = ({ transfersSelected, onClick, classes }) => (
             key={cur}
             control={(
               <Checkbox
-                checked={contains(index, transfersSelected)}
-                onChange={() => onClick(index)}
+                checked={contains(index - 1, transfersSelected)}
+                onChange={() => onClick(index - 1)}
                 classes={{
                   root:    classes.root,
                   checked: classes.checked
