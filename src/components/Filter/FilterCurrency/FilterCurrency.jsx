@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-const currencies = ['USD', 'RUB', 'EUR']
+const currencies = ['RUB', 'USD', 'EUR']
 
 const FilterCurrency = ({ currency, onClick }) => (
   <div className="filter-currency-wrapper">

@@ -17,6 +17,9 @@
   .transfer-selectors {
     padding-top: 0.7rem;
     border-radius: 0.1rem;
+    .transfer-checkbox {
+      display: flex;
+    }
     .input-label{
       color: #4a4a4a;
     }
@@ -24,5 +27,30 @@
 
   .transfer-checkbox{
     padding:0 1rem;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    position: relative;
+    .only-that-button {
+      background: inherit;
+      border: none;
+      visibility: hidden;
+      right: 0;
+      text-align: right;
+      position: absolute;
+      cursor: pointer;
+      color: #2196f3;
+      font-size: 11px;
+      top: 30%;
+      &:active{
+        outline: none;
+      }
+    }
+    &:hover {
+      background: #f1fcff;
+      .only-that-button {
+        visibility: visible;
+      }
+    }
   }
 }

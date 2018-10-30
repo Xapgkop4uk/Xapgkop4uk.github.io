@@ -7,7 +7,8 @@ const Filter = ({
   handleCurrencyChange,
   selectedCurrency,
   selectedFilters,
-  handleFilterChange
+  handleFilterChange,
+  handleSelectOne
 }) => (
   <div className="filter-wrapper">
     <FilterCurrency
@@ -17,6 +18,7 @@ const Filter = ({
     <FilterTransfer
       transfersSelected={selectedFilters}
       onClick={handleFilterChange}
+      handleSelectOne={handleSelectOne}
     />
   </div>
 )
@@ -25,7 +27,8 @@ Filter.propTypes = {
   handleCurrencyChange: propTypes.func.isRequired,
   selectedCurrency:     propTypes.string.isRequired,
   selectedFilters:      propTypes.array.isRequired,
-  handleFilterChange:   propTypes.func.isRequired
+  handleFilterChange:   propTypes.func.isRequired,
+  handleSelectOne:      propTypes.func.isRequired
 }
 
 export default Filter

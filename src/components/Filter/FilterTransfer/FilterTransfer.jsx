@@ -13,7 +13,7 @@ const styles = () => ({
       color: '#2196f3'
     }
   },
-  checked: {},
+  checked:      {},
   tooltipStyle: {
     cursor:      'pointer',
     color:       'white',
@@ -25,12 +25,17 @@ const styles = () => ({
 
 const transfers = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки']
 
-const FilterTransfer = ({ transfersSelected, onClick, classes }) => (
+const FilterTransfer = ({
+  transfersSelected,
+  onClick,
+  classes,
+  handleSelectOne
+}) => (
   <div className="filter-transfer-wrapper">
     <span className="transfer-label">Количество пересадок</span>
     <div className="transfer-selectors">
       {transfers.map((cur, index) => (
-        <div className="transfer-checkbox">
+        <div className="transfer-checkbox" key={`transfer-${cur}`}>
           <FormControlLabel
             key={cur}
             control={(
@@ -44,6 +49,8 @@ const FilterTransfer = ({ transfersSelected, onClick, classes }) => (
               />)}
             label={(<span className="input-label">{cur}</span>)}
           />
+          {(index === 0) ? null
+            : <button type="button" className="only-that-button" onClick={() => handleSelectOne(index - 1)}>ТОЛЬКО</button>}
         </div>))}
     </div>
   </div>
@@ -53,7 +60,8 @@ const FilterTransfer = ({ transfersSelected, onClick, classes }) => (
 FilterTransfer.propTypes = {
   transfersSelected: propTypes.array.isRequired,
   onClick:           propTypes.func.isRequired,
-  classes:           propTypes.object.isRequired
+  classes:           propTypes.object.isRequired,
+  handleSelectOne:   propTypes.func.isRequired
 }
 
 export default withStyles(styles)(FilterTransfer)

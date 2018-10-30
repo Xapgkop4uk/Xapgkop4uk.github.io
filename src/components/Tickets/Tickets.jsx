@@ -24,14 +24,16 @@ const getPrice = (rates, selectedCurrency, price) => {
 const Tickets = ({ tickets, rates, selectedCurrency }) => (
   <div className="tickets-wrapper">
     {tickets.map(ticket => (
-      <div className="ticket-wrapper">
+      <div className="ticket-wrapper" key={`ticket-${ticket.destination}-${ticket.origin}`}>
         <div className="ticket-price">
           <img src="https://a.icons8.com/aUSOiWgn/DW0mD2/logo.svg" alt="avia-logo" />
           <button type="button" className="buy-ticket-button" onClick={() => {}}>
             <span className="buy-ticket-label">
               Купить
               <br />
-              {`за ${new Intl.NumberFormat('ru-RU', { style: 'currency', currency: selectedCurrency, minimumFractionDigits: 0 }).format(getPrice(rates, selectedCurrency, ticket.price))}`}
+              {`за ${new Intl.NumberFormat('ru-RU',
+                { style: 'currency', currency: selectedCurrency, minimumFractionDigits: 0 })
+                .format(getPrice(rates, selectedCurrency, ticket.price))}`}
             </span>
           </button>
         </div>
@@ -76,7 +78,7 @@ const Tickets = ({ tickets, rates, selectedCurrency }) => (
 
 Tickets.propTypes = {
   tickets:          propTypes.array.isRequired,
-  rates:            propTypes.array.isRequired,
+  rates:            propTypes.object.isRequired,
   selectedCurrency: propTypes.string.isRequired
 }
 
