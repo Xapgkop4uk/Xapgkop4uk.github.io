@@ -4,3 +4,55 @@ html, body {
   background: $background-color;
   font-family: 'Open Sans', sans-serif;
 }
+
+@media (max-width: 320px) {
+  html, body, div {
+    width: 100%;
+    padding: 0;
+    padding: 0;
+    margin: 0;
+    .main {
+      padding: 0
+    }
+    .logo-wrapper {
+      padding: 1rem 0;
+    }
+    .filter-wrapper {
+      margin: 0 auto 5px;
+      width: 90%;
+    }
+    .main-content {
+      flex-direction: column;
+    }
+    .ticket-price, .ticket-details {
+      width: 90%;
+      margin: auto;
+    }
+    .tickets-wrapper{
+      padding: 0;
+    }
+    .filter-transfer-wrapper .transfer-checkbox .only-that-button {
+      right: 20px;
+    }
+    .tickets-wrapper .ticket-wrapper {
+      flex-direction: column;
+      width: 90%;
+      align-items: center;
+      justify-content: space-between;
+      height: 300px;
+      margin: auto;
+      margin-bottom: 5px;
+      .ticket-price {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .ticket-details {
+        width: 100%;
+        justify-content: space-around;
+        .route-line {
+          display: none;
+        }
+      }
+    }
+  }
+}
